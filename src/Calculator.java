@@ -24,6 +24,11 @@ public class Calculator {
             System.out.print("Введите второе число: ");
             double operand2 = scanner.nextDouble();
 
+            if (operation.equals("/") && operand2 == 0) {
+                System.out.println("Делить на 0 нельзя.");
+                continue;
+            }
+
             double result = calculate(operation, operand1, operand2);
 
             System.out.printf("%f %s %f = %f\n----------------\n", operand1, operation, operand2, result);
